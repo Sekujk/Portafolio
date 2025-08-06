@@ -56,8 +56,8 @@ Cada vez que hagas push a GitHub, Netlify actualizará tu portafolio automática
 
 ## ✍️ Autor
 - **Alejandro Seclen**
-- [LinkedIn](https://www.linkedin.com/in/TU-LINKEDIN)
-- [Correo](mailto:TU-EMAIL)
+- [LinkedIn](https://www.linkedin.com/in/alejandroseclenl/)
+- [Correo](mailto:alejoseclen@gmail.com)
 
 ---
 
