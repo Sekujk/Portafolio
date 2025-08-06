@@ -59,20 +59,5 @@ Cada vez que hagas push a GitHub, Netlify actualizará tu portafolio automática
 - [LinkedIn](https://www.linkedin.com/in/alejandroseclenl/)
 - [Correo](mailto:alejoseclen@gmail.com)
 
----
-
-### ¿Cómo agregar el `index.html` a git?
-
-Si por alguna razón tu archivo `index.html` no está en el repositorio, puedes agregarlo así:
-
-```bash
-git add index.html
-git commit -m "Agregar index.html"
-git push
-```
-
-Así quedará versionado y subido a GitHub junto con el resto de tu proyecto.
-
----
 
 ¡Gracias por visitar mi portafolio! Si tienes feedback o propuestas, no dudes en contactarme.
