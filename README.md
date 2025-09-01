@@ -14,8 +14,11 @@ Un portafolio web profesional, moderno y optimizado construido con React y Frame
 ## 🛠️ Tecnologías utilizadas
 
 - **React 18** - Biblioteca principal de JavaScript
+- **Vite** - Herramienta de construcción rápida
 - **Framer Motion** - Animaciones y transiciones
 - **React Icons** - Iconos modernos y escalables
+- **EmailJS** - Servicio de envío de emails
+- **i18next** - Internacionalización
 - **CSS3** - Estilos personalizados con variables CSS
 - **HTML5** - Estructura semántica
 
@@ -38,7 +41,7 @@ Un portafolio web profesional, moderno y optimizado construido con React y Frame
 
 1. Clona el repositorio:
 ```bash
-git clone https://github.com/alejandroseclen/portfolio.git
+git clone https://github.com/Sekujk/portfolio.git
 cd portfolio
 ```
 
@@ -47,19 +50,39 @@ cd portfolio
 npm install
 ```
 
-3. Inicia el servidor de desarrollo:
+3. Configura las variables de entorno:
 ```bash
-npm start
+cp .env.example .env
+```
+Edita el archivo `.env` con tus credenciales de EmailJS y otros servicios.
+
+### Configuración de EmailJS
+
+Para que el formulario de contacto funcione correctamente:
+
+1. Ve a [EmailJS](https://www.emailjs.com/) y crea una cuenta
+2. Crea un nuevo servicio (Gmail, Outlook, etc.)
+3. Crea una plantilla de email con las siguientes variables:
+   - `{{from_name}}` - Nombre del remitente
+   - `{{from_email}}` - Email del remitente
+   - `{{message}}` - Mensaje
+   - `{{to_name}}` - Tu nombre
+4. Obtén tu Service ID, Template ID y Public Key
+5. Actualiza el archivo `.env` con estos valores
+
+4. Inicia el servidor de desarrollo:
+```bash
+npm run dev
 ```
 
-4. Abre [http://localhost:3000](http://localhost:3000) en tu navegador
+5. Abre [http://localhost:5173](http://localhost:5173) en tu navegador
 
 ### Scripts disponibles
 
-- `npm start` - Inicia el servidor de desarrollo
+- `npm run dev` - Inicia el servidor de desarrollo con Vite
 - `npm run build` - Construye la aplicación para producción
-- `npm test` - Ejecuta las pruebas
-- `npm run eject` - Expone la configuración de Create React App
+- `npm run preview` - Previsualiza la build de producción
+- `npm run lint` - Ejecuta el linter de código
 
 ## 📂 Estructura del proyecto
 
@@ -73,10 +96,14 @@ src/
 │   ├── Projects.jsx       # Sección de proyectos
 │   ├── Contact.jsx        # Sección de contacto
 │   ├── Footer.jsx         # Pie de página
+│   ├── ParticleBackground.jsx # Fondo de partículas
 │   └── *.css             # Estilos de cada componente
+├── config/
+│   └── emailjs.js        # Configuración de EmailJS
 ├── App.jsx               # Componente principal
 ├── App.css              # Estilos globales de la app
-├── index.js             # Punto de entrada
+├── i18n.js              # Configuración de internacionalización
+├── index.jsx            # Punto de entrada
 └── index.css            # Estilos base y variables CSS
 ```
 
@@ -140,8 +167,8 @@ Para personalizar el contenido:
 ## 📞 Contacto
 
 - **Email**: alejoseclen@gmail.com
-- **LinkedIn**: [linkedin.com/in/alejandro-seclen](https://linkedin.com/in/alejandro-seclen)
-- **GitHub**: [github.com/alejandroseclen](https://github.com/alejandroseclen)
+- **LinkedIn**: [linkedin.com/in/alejandroseclenl](https://www.linkedin.com/in/alejandroseclenl/)
+- **GitHub**: [github.com/Sekujk](https://github.com/Sekujk)
 
 ## 📄 Licencia
 
