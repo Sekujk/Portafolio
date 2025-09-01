@@ -1,0 +1,116 @@
+.dark-mode-toggle {
+  position: fixed;
+  top: 50%;
+  right: 2rem;
+  transform: translateY(-50%);
+  z-index: 1000;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50px;
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow);
+}
+
+.toggle-track {
+  width: 50px;
+  height: 26px;
+  border-radius: 13px;
+  position: relative;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.toggle-thumb {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.toggle-icon {
+  font-size: 0.8rem;
+  color: var(--accent-blue);
+}
+
+/* Dark theme styles */
+[data-theme="dark"] {
+  --primary-dark: #0f0f0f;
+  --primary-gray: #1a1a1a;
+  --secondary-gray: #2d2d2d;
+  --light-gray: #1f2937;
+  --lighter-gray: #111827;
+  --accent-blue: #60a5fa;
+  --accent-blue-light: #93c5fd;
+  --text-dark: #f9fafb;
+  --text-medium: #d1d5db;
+  --text-light: #9ca3af;
+  --text-muted: #6b7280;
+  --white: #111827;
+  --border-color: #374151;
+  --gradient-subtle: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+  --gradient-dark: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+  --gradient-light: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="dark"] body {
+  background-color: #111827;
+  color: #f9fafb;
+}
+
+[data-theme="dark"] .nav {
+  background-color: rgba(17, 24, 39, 0.95);
+}
+
+[data-theme="dark"] .nav-scrolled {
+  background-color: rgba(17, 24, 39, 0.98);
+  border-bottom-color: #374151;
+}
+
+[data-theme="dark"] .hero {
+  background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+}
+
+[data-theme="dark"] .toggle-icon {
+  color: #e5e7eb;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .dark-mode-toggle {
+    top: auto;
+    bottom: 2rem;
+    right: 1rem;
+    transform: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .dark-mode-toggle {
+    bottom: 1rem;
+    right: 1rem;
+  }
+  
+  .toggle-track {
+    width: 45px;
+    height: 24px;
+  }
+  
+  .toggle-thumb {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .toggle-icon {
+    font-size: 0.7rem;
+  }
+}

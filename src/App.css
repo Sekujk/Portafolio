@@ -1,0 +1,98 @@
+/* App-specific styles */
+.App {
+  text-align: left;
+}
+
+/* Smooth scrolling for the entire app */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Ensure proper stacking context */
+main {
+  position: relative;
+  z-index: 1;
+}
+
+/* Performance optimizations */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* GPU acceleration for animations */
+.hero,
+.project-card,
+.skill-item,
+.btn {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+/* Optimize repaints */
+.particle-background {
+  contain: layout style paint;
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Focus styles for better accessibility */
+*:focus {
+  outline: 2px solid var(--accent-blue);
+  outline-offset: 2px;
+  outline-style: solid;
+}
+
+button:focus,
+a:focus,
+input:focus,
+textarea:focus {
+  outline: 2px solid var(--accent-blue);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+}
+
+/* Better focus for interactive elements */
+.btn:focus,
+.filter-btn:focus,
+.project-link:focus,
+.social-link:focus {
+  outline: 2px solid var(--accent-blue);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Loading state for images */
+img {
+  loading: lazy;
+}
+
+/* Print styles */
+@media print {
+  .nav,
+  .hero-scroll,
+  .scroll-to-top {
+    display: none !important;
+  }
+  
+  .hero {
+    min-height: auto;
+    padding: 2rem 0;
+  }
+  
+  .section-padding {
+    padding: 1rem 0;
+  }
+}

@@ -1,0 +1,94 @@
+/* Language Toggle Styles */
+.language-toggle {
+  position: fixed;
+  top: 80px;
+  right: 80px;
+  background: var(--card-bg, rgba(255, 255, 255, 0.9));
+  border: 2px solid var(--primary-color, #007bff);
+  border-radius: 25px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  z-index: 1000;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.language-toggle:hover {
+  background: var(--primary-color, #007bff);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 123, 255, 0.3);
+}
+
+.language-toggle:hover .language-toggle-content {
+  color: white;
+}
+
+.language-toggle-content {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-color, #333);
+  transition: color 0.3s ease;
+}
+
+.lang-option {
+  transition: all 0.3s ease;
+  opacity: 0.6;
+}
+
+.lang-option.active {
+  opacity: 1;
+  color: var(--primary-color, #007bff);
+}
+
+.language-toggle:hover .lang-option.active {
+  color: white;
+}
+
+.separator {
+  opacity: 0.5;
+  font-weight: 300;
+}
+
+/* Dark mode support */
+[data-theme="dark"] .language-toggle {
+  background: var(--card-bg-dark, rgba(42, 42, 42, 0.9));
+  border-color: var(--primary-color, #007bff);
+}
+
+[data-theme="dark"] .language-toggle-content {
+  color: var(--text-color-dark, #e9ecef);
+}
+
+[data-theme="dark"] .lang-option.active {
+  color: var(--primary-color, #007bff);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .language-toggle {
+    top: 15px;
+    right: 15px;
+    padding: 0.4rem 0.8rem;
+  }
+  
+  .language-toggle-content {
+    font-size: 0.8rem;
+    gap: 0.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .language-toggle {
+    top: 10px;
+    right: 10px;
+    padding: 0.3rem 0.6rem;
+  }
+  
+  .language-toggle-content {
+    font-size: 0.75rem;
+  }
+}

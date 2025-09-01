@@ -1,0 +1,203 @@
+.about {
+  padding: 5rem 0;
+  background: var(--lighter-gray);
+  position: relative;
+}
+
+.about-header h2 {
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+}
+
+.section-divider {
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-light));
+  margin: 0 auto 3rem;
+  border-radius: 2px;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-bottom: 4rem;
+}
+
+.about-intro {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.about-icon {
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-light));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+  box-shadow: var(--shadow);
+}
+
+.about-info h3 {
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.about-info p {
+  color: var(--text-light);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.about-info strong {
+  color: var(--accent-blue);
+  font-weight: 600;
+}
+
+.about-interests h3 {
+  color: var(--text-dark);
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+}
+
+.interests-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.interest-card {
+  background: var(--primary-gray);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--secondary-gray);
+  transition: var(--transition);
+  text-align: center;
+}
+
+.interest-card:hover {
+  box-shadow: var(--shadow-xl);
+  border-color: var(--accent-blue);
+}
+
+.interest-icon {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, var(--accent-blue), var(--accent-blue-light));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.2rem;
+  margin: 0 auto 1rem;
+  box-shadow: var(--shadow);
+}
+
+.interest-card h4 {
+  color: white;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.interest-card p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.about-quote {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: var(--white);
+  border-radius: var(--border-radius);
+  border-left: 4px solid var(--accent-blue);
+  box-shadow: var(--shadow-lg);
+  margin: 2rem 0;
+}
+
+.about-quote blockquote {
+  font-size: 1.5rem;
+  font-style: italic;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.about-quote cite {
+  color: var(--text-light);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .about-intro {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .about-icon {
+    align-self: center;
+  }
+  
+  .interests-grid {
+    gap: 1rem;
+  }
+  
+  .interest-card {
+    padding: 1.5rem;
+  }
+  
+  .about-quote {
+    padding: 2rem 1rem;
+  }
+  
+  .about-quote blockquote {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-intro {
+    gap: 1rem;
+  }
+  
+  .about-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+  }
+  
+  .about-info h3 {
+    font-size: 1.25rem;
+  }
+  
+  .about-interests h3 {
+    font-size: 1.25rem;
+  }
+  
+  .interest-card {
+    padding: 1.25rem;
+  }
+  
+  .about-quote blockquote {
+    font-size: 1.1rem;
+  }
+}
